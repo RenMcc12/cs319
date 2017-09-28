@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise04</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function showValues(){
+                var firstName;
+                var lastName;
+                var age;
+                var animal;
+                var color;  
+                
+                firstName =document.biography.firstName.value;
+                //alert(firstName);
+                lastName =document.biography.lastName.value;
+                //alert(lastName);
+                age =document.biography.age.value;
+                //alert(age);
+                animal =document.biography.animal.value;
+                //alert(animal);
+                color =document.biography.color.value;
+                //alert(color);
+               
+                 alert("Hello, my name is"+ firstName +" "+ lastName +".I am"+ age +"years old. My favorite animal is a"+ animal +"and my favorite color is"+ color +".");
+            }
+            
+        </script>
+        <form name="biography" action="#" method="get">
+            <p>First Name: <input type="text" name="firstName"></p>
+            <p>Last Name:<input type="text" name="lastName"></p>
+            <p>Age:<input type="text" name="age"></p>
+            <p>Favorite Animal
+                <select name="animal">
+                    <option value="horse">Horse</option>
+                    <option value="cow">Cow</option>
+                    <option value="pig">Pig</option>
+                </select>
+            </p>
+            <p>Favorite Color:<br>
+                <input type="radio" name="color" value="red">Red<br>
+                <input type="radio" name="color" value="gold">Gold<br>
+                <input type="radio" name="color" value="green">Green<br>
+                <input type="radio" name="color" value="silver">Silver
+            </p>
+           <input type="button" name="go" value="Go!" onclick="showValues();">
+        </form>
+    </body>
+</html>
