@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <Title>Exercise 5 If/ Else</Title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function MonthY() {
+           var Number;
+                Number = document.month.number.value;
+            if(Number=="1"){
+                alert("January");
+            }else if(Number=="2"){
+                alert("Febuary");
+            }else if(Number=="3"){
+                alert("March");
+            }else if(Number=="4"){
+                alert("April");
+            }else if(Number=="5"){
+                alert("May");
+            }else if(Number=="6"){
+                alert("June");
+            }else if(Number=="7"){
+                alert("July");
+            }else if(Number=="8"){
+                alert("August");
+            }else if(Number=="9"){
+                alert("September");
+            }else if(Number=="10"){
+                alert("October");
+            }else if(Number=="11"){
+                alert("November");
+            }else if(Number=="12"){
+                alert("December");
+            }else if(Number>12 || Number<1){
+                alert("This is not a number that corresponds with a month");
+                document.month.number.focus();
+                return false;
+            }
+            }
+        
+        </script>
+        <form id="month" name="month" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return MonthY();">
+            <p>Months</p>
+            <p>Monthly Number:<input type="text" name="number"></p>
+            <input type="Submit" name="submit" value="Submit">
+            
+        </form>
+    </body>
+</html>
