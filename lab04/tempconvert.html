@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Temperature Converter</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function tempConvert(){
+                var TemperatureinFahrenheit;
+                    TemperatureinFahrenheit =parseFloat(document.example.tempinFahr.value);
+                    TemperatureinCelsius=((tempinFahr -32)*5/9);
+                    document.tempinFahr.tempinCels.value= TemperatureinCelsius;
+                var TemperatureinCelsius;
+                    TemperatureinCelsius= parseFloat(document.example.tempinCels.value);
+                    TemperatureinFahrenheit=((tempinCels * 9/5)+32);
+                    document.tempninCels.tempinFahr.value= TemperatureinFahrenheit;
+             }
+        </script>
+        <form name=tempConvert id="tempConver" action="#" method="get"> 
+            <p>Temperature Converter</p>
+            <p>Temperature in Fahrenheit:<br><input type="text" name="tempinFahr" id="tempinFahr"></p>
+            <p><input type="button" name="ftoC" value=" F to C "> <input type="button" name="ctoF" value=" C to F " onclick="tempConvert();"></p>
+            <p>Temperature in Celsius:<br><input type="text" name="tempinCels" id tempinCels></p>
+        </form>   
+    </body>
+</html>
