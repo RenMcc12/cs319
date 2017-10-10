@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab05</title>
+    <meta charset="utf-8">
+  </head>
+    <script>
+        function validate(){
+            //alert ("test");
+            //return true;
+            //return false;
+            var firstName;
+            var lastName;
+            var emaiL;
+                firstName = document.getElementById("fName"). value;
+                lastName = document.getElementById("lName").value;
+                emaiL = document.getElementById("eMail").value;
+                firstName = firstName.trim();
+                lastName = lastName.trim();
+                emaiL = emaiL.trim();
+            if (firstName == "") {
+                alert ("Please fill in First Name.");
+                document.testForm.firstName.focus();
+                document.testForm.firstName.style.backgroundColor = "#ffc6c6";
+                document.testForm.lastName.style.backgroundColor = "#ffffff";
+                document.testForm.emaiL.style.backgroundColor = "#ffffff";
+                return false;
+            } else if(lastName == "") {
+                alert ("Please fill in Last Name.");
+                document.testForm.lastName.focus();
+                document.testForm.lastName.style.backgroundColor = "#ffc6c6";
+                document.testForm.firstName.style.backgroundColor = "#ffffff";
+                document.testForm.emaiL.style.backgroundColor = "#ffffff";
+                return false;
+            } else if (emaiL == ""){
+                alert ("Please fill in Email.");
+                document.testForm.emaiL.focus();
+                document.testForm.emaiL.style.backgroundColor = "#ffc6c6";
+                document.testForm.firstName.style.backgroundColor = "#ffffff";
+                document.testForm.lastName.style.backgroundColor = "#ffffff";
+                return false;
+            }
+            else{
+                return true;
+            }   
+            
+        }
+    </script>
+  <body>
+    <form name="info" id="info" action="#" method="get" onsubmit="return validate();">
+        First Name:<br><br><input type="text" id="fName" name="fName"><br><br>
+        Last Name:<br><br> <input type="text" id="lName" name="lName"><br><br>
+        Email Address:<br><br><input type="text" id="eMail" name="eMail"> <br><br>
+        <input type="submit" name="submit">
+        
+    </form>
+  </body>
+</html>
