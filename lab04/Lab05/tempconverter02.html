@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Temperature Converter</title>
+        <title>Temperature Converter 2.0</title>
         <meta charset="utf-8">
-         <script>
-        function tempConvert(){
-            var tempinFahr;
-            document.
-        }
-    </script>
+   
     </head>
     <body>
+         <script>
+             //alert("testing");
+       function tempconvert() {
+             //alert("test");
+            var TemperatureinFahrenheit;
+            var TemperatureinCelsius; 
+            if(document.getElementById("ftoc").checked == true){
+                //alert ("test");
+                TemperatureinFahrenheit = parseFloat(document.tempConvert.tempinFahr.value);
+                var TemperatureinCelsius =((TemperatureinFahrenheit -32)*5/9);
+                document.tempConvert.tempinCels.value = TemperatureinCelsius;
+                document.tempConvert.tempinCels.style.backgroundColor = "green";
+            } else if(document.getElementById("ctof").checked == true){
+                TemperatureinCelsius = parseFloat(document.tempConvert.tempinCels.value);
+               var TemperatureinFahrenheit = ((TemperatureinCelsius * 9/5)+32);
+                document.tempConvert.tempinFahr.value = TemperatureinFahrenheit;
+                document.tempConvert.tempinFahr.style.backgroundColor = "green";
+            }
+            
+        }
+    </script>
         
         <script>
-            function tempConvertftoc(){
-                var TemperatureinFahrenheit;
-                    TemperatureinFahrenheit = parseFloat(document.tempConvert.tempinFahr.value);
-                var TemperatureinCelsius =((TemperatureinFahrenheit -32)*5/9);
-                    document.tempConvert.tempinCels.value = TemperatureinCelsius;
-                document.tempConvert.tempinCels.style.backgroundColor = "green";
+            //function tempConvertftoc(){
+                //var TemperatureinFahrenheit;
+                    //TemperatureinFahrenheit = parseFloat(document.tempConvert.tempinFahr.value);
+                //var TemperatureinCelsius =((TemperatureinFahrenheit -32)*5/9);
+                    //document.tempConvert.tempinCels.value = TemperatureinCelsius;
+                //document.tempConvert.tempinCels.style.backgroundColor = "green";
                 
-             }
-            function tempConvertctof(){
-                var TemperatureinCelsius;
-                    TemperatureinCelsius = parseFloat(document.tempConvert.tempinCels.value);
-                var TemperatureinFahrenheit = ((TemperatureinCelsius * 9/5)+32);
-                    document.tempConvert.tempinFahr.value = TemperatureinFahrenheit;
-                document.tempConvert.tempinFahr.style.backgroundColor = "green"
-            }
+            // }
+            //function tempConvertctof(){
+              //  var TemperatureinCelsius;
+                //    TemperatureinCelsius = parseFloat(document.tempConvert.tempinCels.value);
+                //var TemperatureinFahrenheit = ((TemperatureinCelsius * 9/5)+32);
+                  //  document.tempConvert.tempinFahr.value = TemperatureinFahrenheit;
+                //document.tempConvert.tempinFahr.style.backgroundColor = "green"
+           // }
         </script>
         <form name=tempConvert id="tempConvert" action="#" method="get"> 
-            <p>Temperature Converter</p>
+            <p>Temperature Converter 2.0</p>
             <p>Temperature in Fahrenheit:<br><input type="text" name="tempinFahr" id="tempinFahr"></p>
-            <p><input type="button" name="ftoC" value=" F to C " onclick="tempConvertftoc()"> <input type="button" name="ctoF" value=" C to F " onclick="tempConvertctof()"></p>
+            <p><input type="radio" name="tConvert" id="ftoc" value=" F to C ">F to C<br>
+                <input type="radio" name="tConvert" id="ctof" value=" C to F ">C to F</p>
             <p>Temperature in Celsius:<br><input type="text" name="tempinCels" id="tempinCels"></p>
+            <input type="button" name="conV" id="conV" value="Convert" onclick="tempconvert();">
         </form>   
     </body>
 </html>
