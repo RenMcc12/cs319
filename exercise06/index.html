@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 6</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script> 
+        function numberGuess() {
+            var a;
+            var b;
+            
+            a=5;
+            
+          b = document.getElementById("playerGuess").value;
+            b = b.trim();
+            if(b == ""){
+                alert("Need a Guess");
+                document.testform.b.focus();
+                return false;
+            } else if( isNaN (b) == true ){
+                alert("Not a Number!");
+                document.testform.b.select();
+                return false;
+            }else if( b < 1 || b > 10 ){
+                alert("Guess is either to HIGH or to LOW.");
+                document.testform.b.select();
+                return false;
+            } else if ( b > 5 ){
+                alert("To High");
+                document.testform.b.select();
+                return false;
+            }else if ( b < 5 ){
+                alert("To Low");
+                document.testform.b.select();
+                return false;
+            } else if ( b == 5 ){
+                alert("You did it!!");
+                return true;
+            }
+                
+            
+        }
+        </script>
+        
+    <form name="guessthenumber" id="guessthenumber" action="#" method="get" onsubmit="return numberGuess();">
+        
+        <p><strong>Guess the Number</strong></p>
+        
+        <input type="text" name="playerGuess" id="playerGuess">
+        <p><input type="submit" name="submit" value="submit" ></p>
+     </form>
+    </body>
+</html>
