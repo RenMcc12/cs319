@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 3</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function showAdding(){
+                var x;
+                var y;
+                var answer;
+                
+                x = 6;
+                //alert(x);
+                y = 12;
+                //alert(y);
+                
+                answer = x + y;
+                //alert(answer);
+                
+                document.getElementById("equation").innerHTML = x + " plus " + y + " equals " + answer + "!";
+                
+            }
+            function showSubtracting(){
+                var x;
+                var y;
+                var answer;
+                
+                x = 10;
+                //alert(x);
+                y = 40;
+                
+                answer = y - x;
+                //alert(answer);
+                
+                document.getElementById("equation").innerHTML = y + " minus " + x + " equals " + answer + "!";
+            }
+            function showMulti(){
+                var x;
+                var y;
+                var answer;
+                
+                x = 2;
+                //alert(x);
+                y = 4;
+                
+                answer = x * y;
+                //alert(answer);
+                
+                document.getElementById("equation").innerHTML = x + " times " + y + " equals " + answer + "!";
+            }
+            function showDivision(){
+                var x;
+                var y;
+                var answer;
+                
+                x = 10;
+                //alert(x);
+                y = 5;
+                
+                answer = x / y;
+                //alert(answer);
+                
+                document.getElementById("equation").innerHTML = x + " divided by " + y + " equals " + answer + "!";
+            }
+        </script>
+        <p id="equation"></p>
+        <form name="calculator" action="#" method="get">
+    
+            <p>
+                <input type="button" name="add" id="add" value="Addition" onclick="showAdding();">
+                <input type="button" name="subtract" id="subtract" value="Subtraction" onclick="showSubtracting();">
+                <input type="button" name="multiply" id="mulitply" value="Multiplication" onclick="showMulti();">
+                <input type="button" name="divide" id="divide" value="Division" onclick="showDivision();">
+            </p>
+        </form>
+    </body>
+</html>
